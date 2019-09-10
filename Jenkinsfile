@@ -32,4 +32,13 @@ node {
             app.push("latest")
         }
     }
+   stage('Run app') {
+        /* This runs the actual image; synonymous to
+         * docker run on the command line */
+
+        app = docker.image("ashishrpandey/hellonode").withRun('-p 8000:8000')
+    }
+
+
+
 }
