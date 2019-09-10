@@ -16,11 +16,11 @@ node {
     }
 
     stage('Test image') {
-        /* Ideally, we would run a test framework against our image.*/
+        /* Ideally, we would run a unit test framework against our image.*/
 
         app.inside {
             sh 'pwd'
-            sh 'echo $hostname'
+            sh 'npm test'
             sh 'echo "Tests passed"'
         }
     }
