@@ -1,6 +1,5 @@
 node {
 
-    agent any
     def app
 
     stage('Clone repository') {
@@ -34,10 +33,6 @@ node {
             app.push("latest")
         }
     }
-
-    stage('Run app') {
-        docker run -d -p "8000:8000" "ashishrpandey/hellonode:latest"
-   }
-
-
+    
+    sh 'docker run -d -p "8000:8000" "ashishrpandey/hellonode:latest"'
 }
