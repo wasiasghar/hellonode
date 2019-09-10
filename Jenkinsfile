@@ -38,7 +38,7 @@ node {
     }*/
 
     stage('Run app') {
-        docker run -p 8000:8000 ashishrpandey/hellonode:latest
+        docker run -d -p "8000:8000" ashishrpandey/hellonode:latest
    }
 
 
