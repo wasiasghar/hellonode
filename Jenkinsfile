@@ -39,7 +39,7 @@ node {
 
     stage('Run app') {
 	steps {
-        sh "docker run -p 8000:8000 $registry:$BUILD_NUMBER "
+        sh 'docker run -p 8000:8000 $registry:$BUILD_NUMBER '
     }
    }
 
