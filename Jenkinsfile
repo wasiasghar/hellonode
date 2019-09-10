@@ -37,9 +37,7 @@ node {
         docker.image("ashishrpandey/hellonode").withRun('-p 8000:8000')
     }*/
     stage('Run app') {
-      steps{
         sh "docker run -p 8000:8000 $registry:$BUILD_NUMBER "
-      }
     }
 
 
