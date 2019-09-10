@@ -19,6 +19,7 @@ node {
         /* Ideally, we would run a test framework against our image.*/
 
         app.inside {
+            sh 'npm install test'
             sh 'npm test'
             sh 'echo "Tests passed"'
         }
