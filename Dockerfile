@@ -2,6 +2,7 @@
 FROM node:7-onbuild
 
 
+RUN npm install test
 # set a health check
 HEALTHCHECK --interval=5s \
             --timeout=5s \
