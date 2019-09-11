@@ -12,7 +12,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("ashishrpandey/hellonode")
+        app = docker.build("towasi/hellonode")
     }
 
     stage('Test image') {
@@ -36,5 +36,5 @@ node {
 
     }
     
-    sh 'docker run -d -p "8000:8000" "ashishrpandey/hellonode:latest"'
+    sh 'docker run -d -p "8000:8000" "towasi/hellonode:latest"'
 }
