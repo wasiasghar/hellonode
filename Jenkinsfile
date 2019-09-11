@@ -36,5 +36,6 @@ node {
 
     }
     
+    sh 'docker container rm -f `docker container ls -q`'
     sh 'docker run -d -p "8000:8000" "towasi/hellonode:latest"'
 }
