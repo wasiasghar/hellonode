@@ -20,7 +20,6 @@ node {
 
         app.inside {
             sh 'pwd'
-            sh 'npm test'
             sh 'echo "Tests passed"'
         }
     }
